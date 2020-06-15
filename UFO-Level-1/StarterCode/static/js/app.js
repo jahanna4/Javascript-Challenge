@@ -3,7 +3,6 @@ var tableData = data;
 
 // YOUR CODE HERE!
 var tableselect = d3.select("tbody");
-// var inputselect = d3.select("#text");
 var filtertable = d3.select("#filter-btn");
 
 function TableDefault() {

@@ -18,27 +18,25 @@ function TableDefault() {
 
 TableDefault();
 
+filtertable.on("click", filtselect);
 
-// var searchinput = d3.select(".form-control").attr("placeholder");
-// var tablerows = document.getElementsByTagName("tr");
-
-filtertable.on("click", filtsel);
-
-function filtsel() {
-    d3.event.preventdefault();
+function filtselect() {
+    d3.event.preventDefault();
 
     var entry = d3.select("#datetime");
     var entryval = entry.property("value");
     var filt = tableData.filter(row => row.datetime === entryval);
     console.log(filt);
 
+    d3.select("#ufo-table").select("tbody").remove();
+    d3.select("#ufo-table").insert("tbody");
+    tbodynew = d3.select("#ufo-table>tbody");
+
     filt.forEach((ufodata) => {
-        var newrow = tableselect.append("tr");
+        var newrow = tbodynew.append("tr");
         Object.entries(ufodata).forEach(([key,value]) => {
             var newcell = newrow.append("td");
             newcell.text(value);
         });
     });
 }
-
-// Note: filtered rows append to bottom of existing table.

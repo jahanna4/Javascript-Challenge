@@ -2,4 +2,4 @@
 
 The purpose of this challenge was to create a dynamic table based upon a provided datatset.
 
-Data was read in from a separate file as a variable and parsed using D3. A table was then created and populated with the data. Table was then set to filter on click of the "Filter Table" button. Upon clicking the "Filter Table" button, the input of the date box will be selected and used to filter the table showing on rows containing that date.
+Data was read in from a separate file as a variable and parsed using D3. A table was then created and populated with the data. Table was then set to filter on click of the "Filter Table" button. Upon clicking the "Filter Table" button, the input of the date box will be selected and used to filter the table showing only rows containing that date.
